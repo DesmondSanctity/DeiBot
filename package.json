@@ -1,14 +1,39 @@
 {
+  "name": "deibot",
+  "version": "1.0.0",
+  "description": "A slackbot that triggers notification privately to users when they use words that are not inclusive in slack channels and suggest more inclusive words to them.",
+  "main": "index.js",
+  "type": "module",
   "scripts": {
-    "dev": "wrangler dev src/index.ts",
-    "deploy": "wrangler deploy --minify src/index.ts"
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "jest"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DesmondSanctity/DeiBot.git"
+  },
+  "keywords": [
+    "bot",
+    "slack",
+    "dei",
+    "inclusive",
+    "javascript",
+    "oss"
+  ],
+  "author": "Desmond Obisi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DesmondSanctity/DeiBot/issues"
+  },
+  "homepage": "https://github.com/DesmondSanctity/DeiBot#readme",
   "dependencies": {
-    "hono": "^3.11.11"
+    "@slack/bolt": "^3.17.0",
+    "alex": "^11.0.1",
+    "dotenv": "^16.3.1",
+    "nodemon": "^3.0.2"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "^4.20231218.0",
-    "wrangler": "^3.22.0",
-    "typescript": "^5.0.4"
+    "jest": "^29.7.0"
   }
 }
